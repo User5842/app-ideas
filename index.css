@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+.tiers {
+  list-style: none;
+  padding: 0;
+}
+
+.tiers__tier {
+  font-weight: bold;
+}
+
+.tiers__project {
+  padding: 0.5rem;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+
+.footer__link {
+  text-decoration: none;
+}
+
+.highlight {
+  color: yellow;
+}
