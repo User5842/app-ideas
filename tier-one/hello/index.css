@@ -6,13 +6,12 @@
   font-family: "Fira Sans", sans-serif;
   display: flex;
   height: 100vh;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
 .main {
   margin: auto;
-  width: 50%;
 }
 
 .fieldset {
@@ -29,9 +28,19 @@
   margin-top: 1rem;
 }
 
+#codes {
+  width: 100%;
+}
+
 .form__button {
   background-color: black;
   color: white;
   cursor: pointer;
   font-family: "Fira Sans", sans-serif;
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    width: calc(100% - 40px);
+  }
 }

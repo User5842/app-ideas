@@ -35,3 +35,9 @@
 .highlight {
   color: yellow;
 }
+
+@media screen and (max-width: 720px) {
+  .page {
+    width: calc(100% - 40px);
+  }
+}
