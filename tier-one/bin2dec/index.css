@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: auto;
+}
+
+.fieldset {
+  margin: 0;
+}
+
+.legend {
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+}
+
+.form__control {
+  margin-top: 1rem;
+}
+
+#binary {
+  border: 2px solid black;
+}
+
+#binary:invalid {
+  border-color: red;
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    width: calc(100% - 40px);
+  }
+}

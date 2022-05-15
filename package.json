@@ -2,16 +2,15 @@
   "name": "app-ideas",
   "version": "1.0.0",
   "description": "This repository serves as the home for all projects implemented from the [app-ideas](https://github.com/florinpop17/app-ideas) repository.",
-  "private": true,
+  "license": "ISC",
+  "homepage": "https://github.com/User5842/app-ideas-nest",
+  "author": "Rafael Negron <r.negron1@umiami.edu> (https://rafaeln.me/)",
   "scripts": {
     "build": "npm run format && npm run lint",
     "deploy": "surge",
     "format": "prettier --write .",
     "lint": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "Rafael Negron",
-  "license": "ISC",
   "dependencies": {
     "surge": "^0.23.1"
   },
@@ -19,5 +18,6 @@
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
     "prettier": "2.6.2"
-  }
+  },
+  "private": true
 }
