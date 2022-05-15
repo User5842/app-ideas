@@ -11,4 +11,4 @@ This repository serves as the home for all projects implemented from the [app-id
 
 # Check it out
 
-This project uses [Surge](https://surge.sh/) for deployments and can currently be accessed [here](http://highfalutin-camera.surge.sh).
+This project uses [Surge](https://surge.sh/) for deployments and can currently be accessed [here](http://flowery-language.surge.sh).
