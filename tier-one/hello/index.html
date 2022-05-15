@@ -4,7 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./client/hello.client.js" type="module"></script>
+    <script src="./data/data.js" type="module"></script>
+    <script src="./components/control-panel.js" type="module"></script>
+    <script src="./components/info.js" type="module"></script>
+    <script src="./components/status.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
     <title>hello</title>
   </head>
-  <body></body>
+  <body class="page">
+    <main class="main">
+      <form id="form">
+        <fieldset class="fieldset">
+          <legend class="legend">Control Panel</legend>
+
+          <div class="form__control">
+            <label for="username">Username: </label>
+            <input id="username" type="text" required />
+          </div>
+
+          <div class="form__control">
+            <label for="password">Password: </label>
+            <input id="password" type="password" required />
+          </div>
+
+          <div class="form__control">
+            <label for="codes">Choose a language code:</label>
+
+            <select id="codes">
+              <option value="">Please choose an option</option>
+            </select>
+          </div>
+
+          <div class="form__control">
+            <button class="form__button" data-login>Login</button>
+            <button class="form__button" data-logout>Logout</button>
+          </div>
+        </fieldset>
+      </form>
+      <section>
+        <p id="status">Log in for a greeting!</p>
+      </section>
+      <section class="debug">
+        <pre>
+          <code id="info"></code>
+        </pre>
+      </section>
+    </main>
+  </body>
 </html>
