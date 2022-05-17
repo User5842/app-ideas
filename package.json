@@ -6,10 +6,11 @@
   "homepage": "https://github.com/User5842/app-ideas-nest",
   "author": "Rafael Negron <r.negron1@umiami.edu> (https://rafaeln.me/)",
   "scripts": {
-    "build": "npm run format && npm run lint",
+    "build": "npm run format && npm run lint && npm run lint:styles",
     "deploy": "surge",
     "format": "prettier --write .",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "lint:styles": "stylelint \"**/*.css\""
   },
   "dependencies": {
     "surge": "^0.23.1"
@@ -17,7 +18,10 @@
   "devDependencies": {
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "stylelint": "^14.8.2",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
   },
   "private": true
 }
