@@ -4,10 +4,11 @@ This repository serves as the home for all projects implemented from the [app-id
 
 # Completed Work
 
-| Tier | Name                          |
-| ---- | ----------------------------- |
-| One  | [bin2dec](/tier-one/bin2dec/) |
-| One  | [hello](/tier-one/hello/)     |
+| Tier | Name                                                |
+| ---- | --------------------------------------------------- |
+| One  | [bin2dec](/tier-one/bin2dec/)                       |
+| One  | [hello](/tier-one/hello/)                           |
+| Two  | [markdown previewer](/tier-two/markdown-previewer/) |
 
 # Check it out
 
