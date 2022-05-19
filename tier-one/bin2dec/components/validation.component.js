@@ -14,7 +14,7 @@ class Validation {
    * Clears the validation message.
    */
   clearValidationMessage() {
-    this._validationElement.innerHTML = '';
+    this._validationElement.innerHTML = "";
   }
 
   /**

@@ -1,5 +1,6 @@
-import {parseStatusPage} from '../utils/utils.js';
-import OperationFactory from './operation-factory.component.js';
+import OperationFactory from "./operation-factory.component.js";
+
+import { parseStatusPage } from "../utils/utils.js";
 
 /**
  * Manages the operations container.
@@ -14,7 +15,7 @@ class Operations {
    */
   constructor(operationsSelector) {
     this.#operationsElement = document.querySelector(operationsSelector);
-    this.#operationFactory = new OperationFactory('#operation__template');
+    this.#operationFactory = new OperationFactory("#operation__template");
 
     this.fetchOperations();
   }
@@ -23,7 +24,7 @@ class Operations {
    * Clears the operations element.
    */
   clear() {
-    this.#operationsElement.innerHTML = '';
+    this.#operationsElement.innerHTML = "";
   }
 
   /**
@@ -32,13 +33,13 @@ class Operations {
    * DOM Parsing, sanitization and filtering.
    */
   fetchOperations() {
-    fetch('https://www.githubstatus.com/')
-        .then((response) => response.text())
-        .then(parseStatusPage)
-        .then((statusPage) => statusPage.querySelector('.components-container '))
-        .then((operationsContainer) => operationsContainer.children)
-        .then(this.#filterOperations)
-        .then((operations) => this.#renderOperations(operations));
+    fetch("https://www.githubstatus.com/")
+      .then((response) => response.text())
+      .then(parseStatusPage)
+      .then((statusPage) => statusPage.querySelector(".components-container "))
+      .then((operationsContainer) => operationsContainer.children)
+      .then(this.#filterOperations)
+      .then((operations) => this.#renderOperations(operations));
   }
 
   /**
@@ -50,7 +51,7 @@ class Operations {
   #filterOperations(operations) {
     const operationsArray = Array.from(operations);
     return operationsArray.filter(
-        (operation) => !operation.textContent.trim().includes('githubstatus.com'),
+      (operation) => !operation.textContent.trim().includes("githubstatus.com")
     );
   }
 

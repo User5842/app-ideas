@@ -15,7 +15,7 @@ class Info {
    * Clears the content of the info panel.
    */
   clear() {
-    this._infoElement.innerHTML = '';
+    this._infoElement.innerHTML = "";
   }
 
   /**

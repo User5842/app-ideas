@@ -27,7 +27,7 @@ class Output {
    */
   render(dirty) {
     this.#cleanHTML = DOMPurify.sanitize(dirty, {
-      USE_PROFILES: {html: true},
+      USE_PROFILES: { html: true },
     });
     this.#outputElement.innerHTML = this.#cleanHTML;
   }

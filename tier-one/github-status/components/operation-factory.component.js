@@ -20,21 +20,21 @@ class OperationFactory {
    * within the `github-status` application.
    */
   generateOperation(operation) {
-    const operationName = operation.querySelector('.name').textContent.trim();
+    const operationName = operation.querySelector(".name").textContent.trim();
     const operationStatus = operation
-        .querySelector('.component-status')
-        .textContent.trim();
+      .querySelector(".component-status")
+      .textContent.trim();
 
     const element = this.#getElement();
-    element.querySelector('.operation__name').textContent = operationName;
+    element.querySelector(".operation__name").textContent = operationName;
 
-    const operationStatusElement = element.querySelector('.operation__status');
+    const operationStatusElement = element.querySelector(".operation__status");
     operationStatusElement.textContent = operationStatus;
 
-    if (operationStatus === 'Operational') {
-      operationStatusElement.classList.add('operational');
+    if (operationStatus === "Operational") {
+      operationStatusElement.classList.add("operational");
     } else {
-      operationStatusElement.classList.add('error');
+      operationStatusElement.classList.add("error");
     }
 
     return element;
@@ -46,9 +46,9 @@ class OperationFactory {
    */
   #getElement() {
     return document
-        .querySelector(this.#templateSelector)
-        .content.cloneNode(true)
-        .querySelector('.operation');
+      .querySelector(this.#templateSelector)
+      .content.cloneNode(true)
+      .querySelector(".operation");
   }
 }
 

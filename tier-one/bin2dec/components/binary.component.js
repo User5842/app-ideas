@@ -8,9 +8,9 @@ class Binary {
    * @param {Object} handlers Handler object.
    * @param {Function} handlers.handleInput Handles the input event.
    */
-  constructor(binarySelector, {handleInput}) {
+  constructor(binarySelector, { handleInput }) {
     this._binaryElement = document.querySelector(binarySelector);
-    this._binaryInput = this._binaryElement.querySelector('#binary');
+    this._binaryInput = this._binaryElement.querySelector("#binary");
 
     this._handleInput = handleInput;
 
@@ -21,7 +21,7 @@ class Binary {
    * Sets relevant event listeners.
    */
   _setEventListeners() {
-    this._binaryInput.addEventListener('input', (e) => this._handleInput(e));
+    this._binaryInput.addEventListener("input", (e) => this._handleInput(e));
   }
 }
 

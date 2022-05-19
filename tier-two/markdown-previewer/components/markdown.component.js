@@ -9,7 +9,7 @@ class Markdown {
    * Constructs an instance of `Markdown`.
    * @param {String} markdownSelector The relevant CSS selector.
    */
-  constructor(markdownSelector, {handleInput}) {
+  constructor(markdownSelector, { handleInput }) {
     this.#markdownElement = document.querySelector(markdownSelector);
 
     this.#handleInput = handleInput;
@@ -34,7 +34,7 @@ class Markdown {
    * Sets the relevant event listeners.
    */
   #setEventListeners() {
-    this.#markdownElement.addEventListener('input', this.#debouncedInput());
+    this.#markdownElement.addEventListener("input", this.#debouncedInput());
   }
 }
 

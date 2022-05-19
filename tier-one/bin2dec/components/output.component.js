@@ -14,7 +14,7 @@ class Output {
    * Clears the output.
    */
   clearOutput() {
-    this._outputElement.innerHTML = '';
+    this._outputElement.innerHTML = "";
   }
 
   /**

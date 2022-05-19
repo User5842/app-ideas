@@ -5,7 +5,7 @@
  */
 function parseStatusPage(statusPageText) {
   const parser = new DOMParser();
-  return parser.parseFromString(statusPageText, 'text/html');
+  return parser.parseFromString(statusPageText, "text/html");
 }
 
-export {parseStatusPage};
+export { parseStatusPage };

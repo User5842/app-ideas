@@ -11,7 +11,7 @@ class Copy {
    * @param {Object} handlers Action handlers
    * @param {Function} handlers.handleCopy Handles the copy action.
    */
-  constructor(copySelector, {handleCopy}) {
+  constructor(copySelector, { handleCopy }) {
     this.#copyElement = document.querySelector(copySelector);
 
     this.#handleCopy = handleCopy;
@@ -23,7 +23,7 @@ class Copy {
    * Sets the relevant event listeners.
    */
   #setEventListeners() {
-    this.#copyElement.addEventListener('click', () => this.#handleCopy());
+    this.#copyElement.addEventListener("click", () => this.#handleCopy());
   }
 }
 

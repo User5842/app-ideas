@@ -7,7 +7,7 @@ class HelloClient {
    * Retrieves relevant user information including their IPv4 address.
    */
   async getIP() {
-    const response = await fetch('http://localhost:3000/ip');
+    const response = await fetch("http://localhost:3000/ip");
     return this._handleResponse(response);
   }
 

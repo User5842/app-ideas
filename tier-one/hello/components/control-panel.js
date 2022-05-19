@@ -1,4 +1,4 @@
-import languageCodes from '../data/data.js';
+import languageCodes from "../data/data.js";
 
 /**
  * Component class used to interact with the
@@ -12,10 +12,10 @@ class ControlPanel {
    * @param {Function} handlers.handleLogin Handles the login action.
    * @param {Function} handlers.handleLogout Handles the logout action.
    */
-  constructor(controlPanelSelector, {handleLogin, handleLogout}) {
+  constructor(controlPanelSelector, { handleLogin, handleLogout }) {
     this._controlPanelElement = document.querySelector(controlPanelSelector);
     this._languageCodesElement =
-      this._controlPanelElement.querySelector('#codes');
+      this._controlPanelElement.querySelector("#codes");
 
     this._handleLogin = handleLogin;
     this._handleLogout = handleLogout;
@@ -49,8 +49,8 @@ class ControlPanel {
   _generateLanguageCodes() {
     const codesFragment = new DocumentFragment();
 
-    languageCodes.forEach(({English, alpha2}) => {
-      const optionElement = document.createElement('option');
+    languageCodes.forEach(({ English, alpha2 }) => {
+      const optionElement = document.createElement("option");
       optionElement.textContent = English;
       optionElement.value = alpha2;
       codesFragment.append(optionElement);
@@ -63,8 +63,8 @@ class ControlPanel {
    * Sets necessary event listeners for the component.
    */
   _setEventListeners() {
-    this._controlPanelElement.addEventListener('submit', (e) =>
-      this._handlePanelSubmit(e),
+    this._controlPanelElement.addEventListener("submit", (e) =>
+      this._handlePanelSubmit(e)
     );
   }
 
@@ -75,7 +75,7 @@ class ControlPanel {
   _handlePanelSubmit(e) {
     e.preventDefault();
 
-    'login' in e.submitter.dataset ? this._handleLogin() : this._handleLogout();
+    "login" in e.submitter.dataset ? this._handleLogin() : this._handleLogout();
   }
 }
 

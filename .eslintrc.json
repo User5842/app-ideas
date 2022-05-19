@@ -3,12 +3,51 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["google"],
+  "extends": ["google", "plugin:import/recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "rules": {
+    "import/no-unresolved": "error",
+    "import/order": [
+      1,
+      {
+        "newlines-between": "always",
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "components",
+            "group": "internal"
+          },
+          {
+            "pattern": "common",
+            "group": "internal"
+          },
+          {
+            "pattern": "routes/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "assets/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     "max-len": ["error", { "code": 120 }]
   }
 }

@@ -20,4 +20,4 @@ function convertBinaryToDecimal(binary) {
   return decimal;
 }
 
-export {convertBinaryToDecimal};
+export { convertBinaryToDecimal };
