@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <script src="./index.js" type="module"></script>
+    <title>github-status</title>
+  </head>
+  <body class="body">
+    <section class="page">
+      <header class="header">
+        <h1>github status</h1>
+        <button type="button">refresh</button>
+        <div class="loader loader__visibility_hidden"></div>
+      </header>
+      <main class="operations"></main>
+    </section>
+    <template id="operation__template">
+      <section class="operation">
+        <h1 class="operation__name"></h1>
+        <p class="operation__status"></p>
+      </section>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+@import url("../vendor/loader.css");
+@import url("../vendor/fonts.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 1024px;
+  min-width: 414px;
+  width: calc(100% - 2rem);
+}
+
+.header {
+  text-align: center;
+}
+
+.loader__visibility_hidden {
+  display: none;
+}
+
+.operations {
+  display: grid;
+  gap: 1rem;
+  grid: repeat(2, 1fr) / repeat(2, 1fr);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.operation__status {
+  font-weight: bold;
+}
+
+.operation__status.operational {
+  color: green;
+}
+
+.operation__status.error {
+  color: red;
+}
+
+.operation:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 414px) {
+  .operations {
+    display: flex;
+    flex-direction: column;
+  }
+}
