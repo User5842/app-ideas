@@ -8,6 +8,7 @@ This repository serves as the home for all projects implemented from the [app-id
 | ---- | --------------------------------------------------- |
 | One  | [bin2dec](/tier-one/bin2dec/)                       |
 | One  | [hello](/tier-one/hello/)                           |
+| One  | [github status](/tier-one/github-status//)          |
 | Two  | [markdown previewer](/tier-two/markdown-previewer/) |
 
 # Check it out

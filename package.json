@@ -6,6 +6,7 @@
   "homepage": "https://github.com/User5842/app-ideas-nest",
   "author": "Rafael Negron <r.negron1@umiami.edu> (https://rafaeln.me/)",
   "scripts": {
+    "audit": "npm audit fix --force",
     "build": "npm run format && npm run lint && npm run lint:styles",
     "deploy": "surge",
     "format": "prettier --write .",
@@ -13,7 +14,7 @@
     "lint:styles": "stylelint \"**/*.css\""
   },
   "dependencies": {
-    "surge": "^0.23.1"
+    "surge": "^0.9.0"
   },
   "devDependencies": {
     "eslint": "^8.15.0",
