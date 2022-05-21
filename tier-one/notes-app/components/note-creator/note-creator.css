@@ -1,0 +1,27 @@
+.note-creator {
+  display: flex;
+  flex-direction: column;
+}
+
+#note-input {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  resize: none;
+}
+
+#note-input:active,
+#note-input:focus {
+  outline: none;
+}
+
+.note-input-submit {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+}

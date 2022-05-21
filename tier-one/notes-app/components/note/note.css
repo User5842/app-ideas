@@ -1,0 +1,28 @@
+.note {
+  box-shadow: 0 0 0 1px #ededed;
+  max-width: 250px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.note:hover {
+  background-color: #fff1f1;
+}
+
+.note-controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-time {
+  font-weight: bold;
+}
+
+.note-trash {
+  cursor: pointer;
+}
+
+.note-content {
+  margin: 0;
+}

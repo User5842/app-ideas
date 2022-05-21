@@ -1,0 +1,7 @@
+.notes {
+  display: grid;
+  gap: 1rem;
+  grid: auto / repeat(2, 1fr);
+  overflow: auto;
+  padding: 0.2rem;
+}

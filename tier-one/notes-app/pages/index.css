@@ -1,0 +1,29 @@
+@import url("../vendor/fonts.css");
+@import url("../components/note-creator/note-creator.css");
+@import url("../components/note/note.css");
+@import url("../components/notes/notes.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 515px;
+  width: 100%;
+}
+
+.divider {
+  background-color: black;
+  border: 2px solid black;
+  margin: 1rem 0;
+}

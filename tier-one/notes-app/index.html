@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <script src="./index.js" type="module"></script>
+    <title>notes-app</title>
+  </head>
+  <body class="page">
+    <main class="main">
+      <h1>notes app</h1>
+      <form class="note-creator">
+        <label for="note-input">Write a note:</label>
+        <textarea
+          id="note-input"
+          name="note-input"
+          required
+          rows="5"
+          spellcheck="false"
+        ></textarea>
+        <button class="note-input-submit" type="submit">Create note</button>
+      </form>
+      <hr class="divider" />
+      <section class="notes"></section>
+    </main>
+    <template id="note-template">
+      <div class="note">
+        <div class="note-controls">
+          <time class="note-time"></time>
+          <span class="note-trash">🗑️</span>
+        </div>
+        <p class="note-content"></p>
+      </div>
+    </template>
+  </body>
+</html>
