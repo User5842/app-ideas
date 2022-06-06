@@ -1,0 +1,15 @@
+#messages {
+  flex: 1 1 500px;
+  list-style-type: none;
+  margin: 0;
+  min-width: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+#messages > li {
+  color: white;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}

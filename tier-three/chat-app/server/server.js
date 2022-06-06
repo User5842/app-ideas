@@ -15,7 +15,7 @@ app.get("/", (_, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log("A user connected.");
+  socket.broadcast.emit("user connected", socket.id);
 
   socket.on("chat message", (msg) => {
     io.emit("chat message", msg);

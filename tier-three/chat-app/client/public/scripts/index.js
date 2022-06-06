@@ -1,21 +1,31 @@
+import ChatForm from "../components/ChatForm/chat-form.js";
+import ChatInput from "../components/ChatInput/chat-input.js";
+import Message from "../components/Message/message.js";
+import Messages from "../components/Messages/messages.js";
+
 const socket = io();
 
-const form = document.getElementById("form");
-const input = document.getElementById("input");
-const messages = document.getElementById("messages");
+const input = new ChatInput();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+new ChatForm({
+  handleFormSubmit: (e) => {
+    e.preventDefault();
 
-  if (input.value) {
-    socket.emit("chat message", input.value);
-    input.value = "";
-  }
+    if (!input.isEmpty()) {
+      socket.emit("chat message", input.value);
+      input.value = "";
+    }
+  },
 });
 
+const messages = new Messages();
+
 socket.on("chat message", (msg) => {
-  const item = document.createElement("li");
-  item.textContent = msg;
-  messages.appendChild(item);
-  messages.scrollTo(0, messages.scrollHeight);
+  const message = Message.createMessage(msg);
+  messages.addNewMessage(message);
+});
+
+socket.on("user connected", (id) => {
+  const message = Message.createMessage(id);
+  messages.addNewMessage(message);
 });
