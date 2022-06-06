@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/pages/index.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/index.js" defer></script>
+    <title>RobCo Messaging</title>
+  </head>
+  <body class="body">
+    <section class="bezel">
+      <section class="screen">
+        <header class="header">
+          <h1 class="header__heading">ROBCO INDUSTRIES MESSAGING TERMINAL</h1>
+          <h1 class="header__heading">COPYRIGHT 2022 ROBCO INDUSTRIES</h1>
+          <h1 class="header__heading">-Main Room-</h1>
+        </header>
+        <main class="main">
+          <ul id="messages"></ul>
+          <form id="form">
+            <input id="input" autocomplete="off" aria-label="Message" />
+            <button type="submit">Send</button>
+          </form>
+        </main>
+      </section>
+    </section>
+  </body>
+</html>

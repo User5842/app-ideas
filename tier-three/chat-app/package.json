@@ -1,0 +1,23 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Real-time chat interface where multiple users can interact with each other by sending messages.",
+  "keywords": [
+    "app-ideas",
+    "chat"
+  ],
+  "license": "ISC",
+  "author": "Rafael Negron <r.negron1@umiami.edu> (https://rafaeln.me)",
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

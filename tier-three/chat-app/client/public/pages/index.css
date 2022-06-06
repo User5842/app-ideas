@@ -1,0 +1,108 @@
+@import url("../vendor/font.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  border: 1rem solid #454f3a;
+  box-shadow: 5px 5px #090d0a;
+  height: 100vh;
+  margin: 0;
+}
+
+.bezel {
+  border: 2rem solid #090d0a;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 15px #090d0a;
+  height: 100%;
+  outline: 1rem solid #090d0a;
+  outline-offset: -9px;
+}
+
+.screen {
+  background-color: #021a06;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(19 81 30 / 5%) 2px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(19 81 30 / 5%) 2px, transparent 1px);
+  background-size: 8px 8px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 15px #090d0a;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  outline: 1rem solid #090d0a;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__heading {
+  color: rgb(78 216 117 / 7%);
+  font-family: Monofonto, monospace;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+#messages {
+  flex: 1 1 500px;
+  list-style-type: none;
+  margin: 0;
+  min-width: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+#messages > li {
+  color: white;
+  font-family: Monofonto, monospace;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+#messages > li:nth-child(odd) {
+  background: #199515;
+}
+
+#form {
+  display: flex;
+  height: 3rem;
+}
+
+#input {
+  background-color: #199515;
+  border: none;
+  color: white;
+  flex-grow: 1;
+  font-family: Monofonto, monospace;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#form > button {
+  background: #199515;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Monofonto, monospace;
+  font-size: 1rem;
+  margin: 0 0 0 0.25rem;
+  outline: none;
+  padding: 0 1rem;
+}
