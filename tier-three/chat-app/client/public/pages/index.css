@@ -2,6 +2,7 @@
 @import url("../components/ChatForm/chat-form.css");
 @import url("../components/ChatInput/chat-input.css");
 @import url("../components/Messages/messages.css");
+@import url("../components/UsernameDialog/username-dialog.css");
 
 * {
   box-sizing: border-box;
@@ -12,6 +13,7 @@
   box-shadow: 5px 5px #090d0a;
   height: 100vh;
   margin: 0;
+  min-width: 414px;
 }
 
 .bezel {

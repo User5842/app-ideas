@@ -1,11 +1,29 @@
-import ChatForm from "../components/ChatForm/chat-form.js";
-import ChatInput from "../components/ChatInput/chat-input.js";
-import Message from "../components/Message/message.js";
-import Messages from "../components/Messages/messages.js";
+import {
+  ChatForm,
+  ChatInput,
+  Message,
+  Messages,
+  UsernameDialog,
+} from "../components/ui.js";
 
-const socket = io();
+const URL = "http://localhost:3000";
+const socket = io(URL, { autoConnect: false });
 
 const input = new ChatInput();
+
+const usernameDialog = new UsernameDialog({
+  handleFormSubmit: (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    socket.auth = { username: formData.get("username") };
+
+    socket.connect();
+    usernameDialog.close();
+  },
+});
+
+usernameDialog.show();
 
 new ChatForm({
   handleFormSubmit: (e) => {
@@ -20,12 +38,12 @@ new ChatForm({
 
 const messages = new Messages();
 
-socket.on("chat message", (msg) => {
-  const message = Message.createMessage(msg);
-  messages.addNewMessage(message);
+socket.on("chat message", ({ message, username }) => {
+  const newMessage = Message.createUserMessage(username, message);
+  messages.addNewMessage(newMessage);
 });
 
-socket.on("user connected", (id) => {
-  const message = Message.createMessage(id);
+socket.on("user connected", (username) => {
+  const message = Message.createMessage(`${username} has connected.`);
   messages.addNewMessage(message);
 });

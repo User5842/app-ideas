@@ -14,11 +14,23 @@ app.get("/", (_, res) => {
   res.sendFile(path.resolve(__dirname, "..", "client", "index.html"));
 });
 
+io.use((socket, next) => {
+  const username = socket.handshake.auth.username;
+  console.log(username);
+
+  if (!username) {
+    return next(new Error("Invalid username."));
+  }
+
+  socket.username = username;
+  next();
+});
+
 io.on("connection", (socket) => {
-  socket.broadcast.emit("user connected", socket.id);
+  socket.broadcast.emit("user connected", socket.username);
 
   socket.on("chat message", (msg) => {
-    io.emit("chat message", msg);
+    io.emit("chat message", { message: msg, username: socket.username });
   });
 
   socket.on("disconnect", () => {
